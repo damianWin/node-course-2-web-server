@@ -54,7 +54,6 @@ app.get('/home', (req, res) => {
         pageTitle: 'Home Pager',
         welcomeMessage: 'Holas y welcome to Home Page!'
     });
-
 });
 
 
@@ -63,6 +62,13 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Everything crashed'
     })
 })
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'PROJECTS',
+        welcomeMessage: 'Holas y welcome to "Projects"!'
+    });
+});
 
 app.listen(port, () => {
     console.log(`Server is on port ${port}`)
